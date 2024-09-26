@@ -16,16 +16,26 @@ def main():
     tax = int
     tip = int
     total = int
+    
+    while True:
+        #get input
+        bill = input("Enter bill amount: ")
 
-    #calculate amounts
-    bill = int(input("Enter bill amount: "))
-    tax = bill * taxRate
-    tip = bill * tipRate
-    total = bill + tax + tip
+        #if input is an int, convert to an int, if not, restart the program
+        try:
+            bill = int(bill)
+        except ValueError:
+            print("Invalid value, please try again. \n")
+            continue
+        
+        #calculate amounts
+        tax = bill * taxRate
+        tip = bill * tipRate
+        total = bill + tax + tip
 
-    #print out values
-    print("Original bill: ${0:.2f}".format(bill))
-    print("Tax: ${0:.2f}".format(tax))
-    print("Tip: ${0:.2f}".format(tip))
-    print("Total: ${0:.2f}".format(total))
+        #print out values
+        print("Original bill: ${0:.2f}".format(bill))
+        print("Tax: ${0:.2f}".format(tax))
+        print("Tip: ${0:.2f}".format(tip))
+        print("Total: ${0:.2f}\n".format(total))
 main()
