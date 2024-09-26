@@ -18,12 +18,9 @@ def main():
     total = int
     
     while True:
-        #get input
-        bill = input("Enter bill amount: ")
-
         #if input is an int, convert to an int, if not, restart the program
         try:
-            bill = int(bill)
+            bill = int(input("Enter bill amount: "))
         except ValueError:
             print("Invalid value, please try again. \n")
             continue
