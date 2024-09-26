@@ -9,15 +9,23 @@
 
 
 def main():
-    # YOUR CODE STARTS HERE, each line must be indented (one tab)
+    #init variables
+    taxRate = 0.15
+    tipRate = 0.20
+    bill = int
+    tax = int
+    tip = int
+    total = int
 
+    #calculate amounts
+    bill = int(input("Enter bill amount: "))
+    tax = bill * taxRate
+    tip = bill * tipRate
+    total = bill + tax + tip
 
-
-
-
-
-
-
-    # YOUR CODE ENDS HERE
-
+    #print out values
+    print("Original bill: ${0:.2f}".format(bill))
+    print("Tax: ${0:.2f}".format(tax))
+    print("Tip: ${0:.2f}".format(tip))
+    print("Total: ${0:.2f}".format(total))
 main()
